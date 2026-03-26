@@ -1,10 +1,10 @@
-# 🏠 Real Estate Price Prediction
+#  Real Estate Price Prediction
 
 A comprehensive machine learning project that predicts housing prices based on property features such as area, bedrooms, bathrooms, stories, parking, and amenities. This project demonstrates a full ML lifecycle—from automated preprocessing and model selection to a containerized Flask web application.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 * **data/**
     * `housing.csv`: Dataset used for training and testing.
@@ -21,16 +21,16 @@ A comprehensive machine learning project that predicts housing prices based on p
 
 ---
 
-## 🛠️ Installation & run
+##  Installation & run
 - pip install -r requirements.txt
 - python app/main.py
 - ---
 
-## 📊 Features & Preprocessing
+##  Features & Preprocessing
 
 The project uses a structured Scikit-Learn `Pipeline` to ensure that data transformation is identical during both training and real-time inference. This prevents data leakage and ensures model stability.
 
-### 🏗️ Preprocessing Architecture
+###  Preprocessing Architecture
 The data undergoes a dual-path transformation before reaching the regression model:
 
 * **Numerical Features:**
@@ -40,12 +40,12 @@ The data undergoes a dual-path transformation before reaching the regression mod
     * *Columns:* `mainroad`, `guestroom`, `basement`, `hotwaterheating`, `airconditioning`, `prefarea`, `furnishingstatus`.
     * *Method:* **OneHotEncoder** (Converts labels into binary vectors to handle non-numeric data).
 
-### 🎯 Target Variable
+###  Target Variable
 * **Price:** The model performs **Regression** to predict the continuous numerical value of a property.
 
 ---
 
-## 🧪 Model Evaluation
+##  Model Evaluation
 The `pipeline.py` script iterates through multiple models (e.g., Linear Regression, Random Forest, Gradient Boosting) and compares them using:
 * **RMSE (Root Mean Square Error):** Measures the average magnitude of the error.
 * **R² Score:** Indicates how well the independent variables explain the variability of the price.
